@@ -31,6 +31,9 @@ services:
     networks:
       - rede-site
     restart: on-failure
+networks:
+  rede-site:
+    driver: bridge
 volumes:
   banco:
     external: true

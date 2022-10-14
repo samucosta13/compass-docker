@@ -19,7 +19,7 @@ services:
     image: wordpress:latest
     container_name: site
     ports:
-      - '80:8080'
+      - '8080:8080'
     environment:
       TZ: America/Sao_Paulo
       WORDPRESS_DB_HOST: mysql

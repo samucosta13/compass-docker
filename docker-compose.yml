@@ -10,3 +10,5 @@ services:
     networks:
       - rede-site
     restart: always
+    volumes:
+      - 'banco:/var/lib/mysql'

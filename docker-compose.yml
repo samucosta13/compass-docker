@@ -12,3 +12,6 @@ services:
     restart: always
     volumes:
       - 'banco:/var/lib/mysql'
+volumes:
+  banco:
+    external: true

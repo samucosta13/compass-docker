@@ -1,0 +1,12 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: banco
+    ports:
+      - '3600:3306'
+    environment:
+      TZ: America/Sao_Paulo
+      MYSQL_ROOT_PASSWORD: docker
+    networks:
+      - rede-site
+    restart: always

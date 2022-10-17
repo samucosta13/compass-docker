@@ -37,6 +37,4 @@ networks:
   rede:
 volumes:
   banco:
-    external: true
   site:
-    external: true

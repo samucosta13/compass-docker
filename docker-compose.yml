@@ -32,7 +32,7 @@ services:
       - rede-site
     restart: always
     volumes:
-      - site:/var/www/html
+      - site:/usr/src/wordpress/
 networks:
   rede-site:
     driver: bridge

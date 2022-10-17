@@ -38,6 +38,4 @@ networks:
     driver: bridge
 volumes:
   banco:
-    external: true
   site:
-    external: true

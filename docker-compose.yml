@@ -35,7 +35,6 @@ services:
       - site:/usr/src/wordpress/
 networks:
   rede-site:
-    driver: bridge
 volumes:
   banco:
     external: true

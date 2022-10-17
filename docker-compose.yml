@@ -7,9 +7,9 @@ services:
     environment:
       TZ: America/Sao_Paulo
       MYSQL_ROOT_PASSWORD: docker
-      MYSQL_USER: estagiario
-      MYSQL_PASSWORD: '12345'
       MYSQL_DATABASE: banco
+      MYSQL_USER: estagiario
+      MYSQL_PASSWORD: '12345'      
     networks:
       - rede-site
     restart: on-failure
@@ -24,15 +24,13 @@ services:
       TZ: America/Sao_Paulo
       WORDPRESS_DB_HOST: mysql
       WORDPRESS_DB_USER: estagiario
-      WORDPRESS_DB_NAME: banco
       WORDPRESS_DB_PASSWORD: '12345'
+      WORDPRESS_DB_NAME: banco
     depends_on: 
       - mysql
     networks:
       - rede-site
     restart: on-failure
-    volumes:
-      - 'site:/var/www/html'
 networks:
   rede-site:
     driver: bridge

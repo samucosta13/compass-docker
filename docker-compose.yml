@@ -9,7 +9,7 @@ services:
       MYSQL_ROOT_PASSWORD: docker
       MYSQL_DATABASE: banco
       MYSQL_USER: estagiario
-      MYSQL_PASSWORD: '12345'      
+      MYSQL_PASSWORD: senha   
     networks:
       - rede-site
     restart: on-failure
@@ -24,7 +24,7 @@ services:
       TZ: America/Sao_Paulo
       WORDPRESS_DB_HOST: mysql
       WORDPRESS_DB_USER: estagiario
-      WORDPRESS_DB_PASSWORD: '12345'
+      WORDPRESS_DB_PASSWORD: senha
       WORDPRESS_DB_NAME: banco
     depends_on: 
       - mysql

@@ -1,6 +1,6 @@
 services:
   mysql:
-    image: mysql:latest
+    image: mysql:8
     container_name: banco
     ports:
       - '3600:3306'
@@ -31,9 +31,13 @@ services:
     networks:
       - rede-site
     restart: on-failure
+    volumes:
+      - 'site:/var/www/html'
 networks:
   rede-site:
     driver: bridge
 volumes:
   banco:
+    external: true
+  site:
     external: true

@@ -1,18 +1,18 @@
 services:
   mysql:
-    image: mysql:latest
+    image: mysql:8
     container_name: banco
     ports:
       - '3600:3306'
     environment:
       TZ: America/Sao_Paulo
       MYSQL_ROOT_PASSWORD: docker
-      MYSQL_DATABASE: banco
       MYSQL_USER: estagiario
-      MYSQL_PASSWORD: senha   
+      MYSQL_PASSWORD: '12345'
+      MYSQL_DATABASE: banco
     networks:
-      - rede
-    restart: always
+      - rede-site
+    restart: on-failure
     volumes:
       - 'banco:/var/lib/mysql'
   wordpress:
@@ -24,17 +24,16 @@ services:
       TZ: America/Sao_Paulo
       WORDPRESS_DB_HOST: mysql
       WORDPRESS_DB_USER: estagiario
-      WORDPRESS_DB_PASSWORD: senha
       WORDPRESS_DB_NAME: banco
+      WORDPRESS_DB_PASSWORD: '12345'
     depends_on: 
       - mysql
     networks:
-      - rede
-    restart: always
-    volumes:
-      - site:/usr/src/wordpress/
+      - rede-site
+    restart: on-failure
 networks:
-  rede:
+  rede-site:
+    driver: bridge
 volumes:
   banco:
-  site:
+    external: true

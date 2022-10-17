@@ -31,6 +31,8 @@ services:
     networks:
       - rede-site
     restart: on-failure
+    volumes:
+      - site:/var/www/html
 networks:
   rede-site:
     driver: bridge

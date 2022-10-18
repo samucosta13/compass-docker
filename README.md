@@ -6,10 +6,15 @@ O objetivo dessa documentação é mostrar o passo a passo para subir uma aplica
 
 
 > ## Windows
+**Pré requisitos:**
 * Primeiramente, é necessário fazer a instalação do [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/). 
-* Após isso, verifique se o Hyper-V essa habilitado. Para isso, abra o prompt de comando como administrador e execute o seguinte comando: `bcdedit`.
+* Após isso, verifique se o Hyper-V esta habilitado. Para isso, abra o prompt de comando como administrador e execute o seguinte comando: `bcdedit`.
 Caso esteja desabilitado, ainda com o prompt de comando como administrador, execute: `bcdedit /set hypervisorlaunchtype auto`
 
+Feito os passos anteriores, o Docker Desktop estará pronto para uso. Utilize o arquivo [docker-compose.yml](https://github.com/samucosta13/compass-docker/blob/main/docker-compose.yml) deste repositório para estruturar os serviços e definir as cofigurações da aplicação. Esse arquivo pode ser modificado por qualquer editor de texto de sua preferência. Neste caso, foi utilizado o editor de código fonte [Visual Studio Code](https://code.visualstudio.com/download)
+
+Antes de subir a aplicação, é necessário criar dois volumes: banco e wordpress. Para isso:
+`d`
 
 > ## Ubuntu
 

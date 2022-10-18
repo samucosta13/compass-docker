@@ -37,4 +37,4 @@ Utilize o arquivo *[docker-compose.yml](https://github.com/samucosta13/compass-d
 
 Ao subir a aplicação, serão criados dois volumes para persistência de dados: banco e site. Caso queira visualizá-los, basta executar `docker volume ls` no terminal do Ubuntu, ou até mesmo no terminal do VS Code.
 
->**Observação:** os volumes criados no Ubuntu, são encontrados no caminho \\\wsl$\docker-desktop-data\data\docker\volumes.
+>**Observação:** os volumes criados no Ubuntu, são encontrados no caminho /var/lib/docker/volumes.

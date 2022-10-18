@@ -14,7 +14,7 @@ Utilize o arquivo *[docker-compose.yml](https://github.com/samucosta13/compass-d
   
 * No diretório onde está o arquivo *docker-compose.yml*, suba a aplicação com o seguinte comando `docker compose up`;
 * No navegador, acesse a página *localhost*;
-* Selecione o idioma do wordpress;
+* Selecione o idioma do Wordpress;
 * Insira usuário, senha e email do usuário administrador da página;
 
 Ao subir a aplicação, serão criados dois volumes para persistência de dados: banco e site. Caso queira visualizá-los, basta executar `docker volume ls` no Power Shell do Windows, ou até mesmo no terminal do VS Code. Certifique-se de que o Docker Desktop esteja ativo para rodar estes comandos.
@@ -32,7 +32,7 @@ Utilize o arquivo *[docker-compose.yml](https://github.com/samucosta13/compass-d
 
 * No diretório onde está o arquivo *docker-compose.yml*, suba a aplicação com o seguinte comando `docker compose up`;
 * No navegador, acesse a página *localhost*;
-* Selecione o idioma do wordpress;
+* Selecione o idioma do Wordpress;
 * Insira usuário, senha e email do usuário administrador da página;
 
 Ao subir a aplicação, serão criados dois volumes para persistência de dados: banco e site. Caso queira visualizá-los, basta executar `docker volume ls` no terminal do Ubuntu, ou até mesmo no terminal do VS Code.

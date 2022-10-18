@@ -35,6 +35,7 @@ services:
       - 'site:/var/www/html'
 networks:
   rede-site:
+    name: rede-site
     driver: bridge
 volumes:
   banco:

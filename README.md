@@ -11,12 +11,14 @@ O objetivo dessa documentação é mostrar o passo a passo para subir uma aplica
 * Após isso, verifique se o Hyper-V esta habilitado. Para isso, abra o prompt de comando como administrador e execute o seguinte comando: `bcdedit`.
 Caso esteja desabilitado, ainda com o prompt de comando como administrador, execute: `bcdedit /set hypervisorlaunchtype auto`
 
-Feito os passos anteriores, o Docker Desktop estará pronto para uso. Utilize o arquivo [docker-compose.yml](https://github.com/samucosta13/compass-docker/blob/main/docker-compose.yml) deste repositório para estruturar os serviços e definir as cofigurações da aplicação. Esse arquivo pode ser modificado por qualquer editor de texto de sua preferência. Neste caso, foi utilizado o editor de código fonte [Visual Studio Code](https://code.visualstudio.com/download).
+Feito os passos anteriores, o Docker Desktop estará pronto para uso. Utilize o arquivo *[docker-compose.yml]*(https://github.com/samucosta13/compass-docker/blob/main/docker-compose.yml) deste repositório para estruturar os serviços e definir as cofigurações da aplicação. Esse arquivo pode ser modificado por qualquer editor de texto de sua preferência. Neste caso, foi utilizado o editor de código fonte [Visual Studio Code](https://code.visualstudio.com/download).
 
-Antes de subir a aplicação, é necessário criar dois volumes: banco e wordpress. Para isso, no Power Shell do Windows, ou até mesmo no terminal do VS Code, execute: `docker volume create banco` e `docker volume create wordpress`.  
+Antes de subir a aplicação, é necessário criar dois volumes: banco e site. Para isso, no Power Shell do Windows, ou até mesmo no terminal do VS Code, execute: `docker volume create banco` e `docker volume create site`.  
 
 >**Observação:** os volumes criados no Windows, são encontrados no caminho \\\wsl$\docker-desktop-data\data\docker\volumes. Eles podem ser acessados da seguinte maneira: 
->>![image](https://user-images.githubusercontent.com/62852333/196316460-3e359a90-7c2d-437f-bebd-067926f1d421.png)
+>>![image](https://user-images.githubusercontent.com/62852333/196316460-3e359a90-7c2d-437f-bebd-067926f1d421.png)  
+  
+No diretório onde está o arquivo *docker-compose.yml*, suba a aplicação com o seguinte comando `docker compose up`.
 
 
 > ## Ubuntu

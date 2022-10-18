@@ -39,6 +39,6 @@ networks:
     driver: bridge
 volumes:
   banco:
-    external: true
+    name: banco
   site:
-    external: true
+    name: site
